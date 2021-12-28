@@ -10,7 +10,7 @@ New-Item -Path $Date -ItemType Directory -ErrorAction Ignore
 
 do {
   # Generate a random file path
-  $FilePath = '{0}\{1}' -f $Date, (New-Guid).Guid
+  $FilePath = './{0}/{1}' -f $Date, (New-Guid).Guid
 
   [System.Security.Cryptography.RNGCryptoServiceProvider] $rng = New-Object System.Security.Cryptography.RNGCryptoServiceProvider
   $rndbytes = New-Object byte[] $FileSize
