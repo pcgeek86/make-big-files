@@ -1,5 +1,5 @@
 $MaxBytes = 1.9GB    # The maximum amount of random data that will be generated
-$FileSize = 50MB     # The size of each randomly generated file that gets created
+$FileSize = 5MB     # The size of each randomly generated file that gets created
 $TotalBytes = 0      # Initialize the amount of randomly generated data to 0
 
 # Get the current date
