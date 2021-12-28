@@ -8,4 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: checkout
+        uses: actions/checkout@v2.4.0
+      - name: Run PowerShell Data Generator
+        run: pwsh -File generatedata.ps1
+      - name: Commit and Push
+        uses: github-actions-x/commit@v2.8
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
