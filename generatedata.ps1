@@ -13,7 +13,7 @@ do {
   $FilePath = '{0}\{1}' -f $Date, (New-Guid).Guid
 
   [System.Security.Cryptography.RNGCryptoServiceProvider] $rng = New-Object System.Security.Cryptography.RNGCryptoServiceProvider
-  $rndbytes = New-Object byte[] $bytes
+  $rndbytes = New-Object byte[] $FileSize
   $rng.GetBytes($rndbytes)
   [System.IO.File]::WriteAllBytes($FilePath, $rndbytes)
   
