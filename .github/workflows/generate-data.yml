@@ -1,0 +1,11 @@
+name: Generate Data
+on:
+  schedule: 0/5 * * * *
+  workflow_dispath:
+
+jobs:
+  generate_data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: checkout
