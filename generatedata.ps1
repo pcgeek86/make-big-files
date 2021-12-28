@@ -19,3 +19,5 @@ do {
   
   $TotalBytes += $FileSize
 } while ($TotalBytes -lt $MaxBytes)
+
+Get-ChildItem -Path .,$Date
